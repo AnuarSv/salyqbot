@@ -17,8 +17,8 @@ This bot accepts an image of a receipt and returns a neatly structured summary. 
 ## 📦 Tech Stack
 
 - Python
-- Telegram Bot API (`python-telegram-bot`)
-- Tesseract OCR
+- Telegram Bot API (`aiogram`)
+- Gemini-Vision-Pro
 
 ## 🚀 How to Run
 
