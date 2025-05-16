@@ -1,0 +1,328 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    color: #0056b3; /* Синий цвет */
+}
+
+main section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: calc(100% - 22px); /* Учитываем padding и border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3; /* Синий цвет */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004494; /* Темнее при наведении */
+}
+
+.hidden {
+    display: none;
+}
+
+#calculation-results p {
+    margin: 8px 0;
+}
+
+#calculation-results span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+#result-warnings p {
+    color: #e67e22; /* Оранжевый для предупреждений */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.explanation-box,
+.disclaimer-box {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-left: 4px solid #0056b3; /* Синяя полоска слева */
+    border-radius: 4px;
+    white-space: pre-wrap; /* Сохраняет переносы строк от AI */
+}
+
+.disclaimer-box {
+    background-color: #fff3cd; /* Светло-желтый для дисклеймера */
+    border-left-color: #ffeeba;
+    font-size: 0.9em;
+    color: #856404;
+}
+
+.error-text {
+    color: #dc3545; /* Красный для ошибок */
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- Стили Чата --- */
+#chat-section {
+    background-color: #e9f5ff; /* Светло-голубой фон для чата */
+    border-color: #b3d7ff;
+}
+
+#chat-container {
+    height: 500px; /* Или другая высота по желанию */
+    overflow-y: auto; /* Добавляем прокрутку, если сообщений много */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff; /* Белый фон для сообщений */
+    border-radius: 4px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word; /* Перенос длинных слов */
+}
+
+.user-message {
+    background-color: #d1eaff; /* Голубой для пользователя */
+    margin-left: auto; /* Прижимаем к правому краю */
+    text-align: right;
+    border-bottom-right-radius: 5px; /* Уголок */
+}
+
+.ai-message {
+    background-color: #e9ecef; /* Серый для AI */
+    margin-right: auto; /* Прижимаем к левому краю */
+    text-align: left;
+    border-bottom-left-radius: 5px; /* Уголок */
+}
+
+#chat-input-area {
+    display: flex; /* Располагаем инпут и кнопку в ряд */
+}
+
+#chat-input {
+    flex-grow: 1; /* Инпут занимает все доступное место */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Скругление слева */
+    margin-right: -1px; /* Убираем двойную границу */
+}
+
+#send-chat-btn {
+    width: auto; /* Автоматическая ширина для кнопки */
+    border-radius: 0 4px 4px 0; /* Скругление справа */
+    padding: 10px 15px;
+    font-size: 14px; /* Чуть меньше шрифт */
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* ... (предыдущие стили для body, container, header, chat) ... */
+
+/* Область для встраиваемых элементов */
+#interactive-area {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 10px; /* Небольшой отступ */
+}
+
+/* Стили для встраиваемой формы */
+.embedded-form-container {
+    padding: 15px;
+    border: 1px dashed #0056b3; /* Пунктирная рамка, чтобы выделить */
+    border-radius: 5px;
+    background-color: #f0f8ff; /* Alice blue */
+    margin-top: 10px;
+}
+
+.embedded-form-container .form-group {
+    margin-bottom: 10px;
+}
+.embedded-form-container label {
+    font-size: 0.9em;
+}
+.embedded-form-container input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 8px; /* Чуть меньше padding */
+    font-size: 0.95em;
+}
+.embedded-form-container .form-buttons {
+    display: flex;
+    gap: 10px; /* Пространство между кнопками */
+    margin-top: 15px;
+}
+.embedded-form-container button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.embedded-form-container #submit-calc-form-btn {
+    background-color: #28a745; /* Зеленый для подтверждения */
+    color: white;
+    border: none;
+    flex-grow: 1; /* Занимает доступное место */
+}
+.embedded-form-container #submit-calc-form-btn:hover {
+    background-color: #218838;
+}
+.embedded-form-container #cancel-calc-form-btn {
+    background-color: #6c757d; /* Серый для отмены */
+    color: white;
+    border: none;
+    flex-grow: 1;
+}
+.embedded-form-container #cancel-calc-form-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Стили для результатов расчета в чате */
+.calculation-result-message {
+    background-color: #e2f0d9; /* Светло-зеленый фон */
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;
+    margin-top: 10px; /* Отступ от предыдущего сообщения */
+}
+.calculation-result-message h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #155724; /* Темно-зеленый */
+    border-bottom: 1px solid #c3e6cb;
+    padding-bottom: 5px;
+}
+.calculation-result-message p {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+.calculation-result-message hr {
+    border: none;
+    border-top: 1px solid #c3e6cb;
+    margin: 10px 0;
+}
+.calculation-result-message span,
+.calculation-result-message [data-result="warnings"] p { /* Стили для спанов и варнингов */
+    font-weight: bold;
+    color: #155724;
+}
+.calculation-result-message [data-result="warnings"] p {
+    color: #e67e22; /* Оранжевый для предупреждений */
+    margin-top: 5px;
+}
+.calculation-result-message .explanation-box { /* Переопределяем стили для вложенного бокса */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-left-width: 3px;
+}
+.calculation-result-message .disclaimer-box {
+    margin-top: 10px;
+    font-size: 0.85em;
+    padding: 8px;
+}
+
+
+/* Кнопка загрузки */
+#loading-chat-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.hidden {
+    display: none;
+}
+.error-text {
+    color: #dc3545; /* Красный для ошибок */
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Footer стили без изменений */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #666;
+}
+#disclaimer-section {
+    margin-top: 15px;
+}
+#disclaimer {
+    /* Стили из старого disclaimer-box */
+    background-color: #fff3cd;
+    border-left: 4px solid #ffeeba;
+    font-size: 0.9em;
+    color: #856404;
+    padding: 15px;
+    border-radius: 4px;
+}
